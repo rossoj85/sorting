@@ -73,7 +73,7 @@ function bubbleSortWhile(arr){
     } 
     ];
   
-    function bubbleSortPersons(persons, pointer=persons.length-1){
+    function bubbleSortPersonsRec(persons, pointer=persons.length-1){
         let len=persons.length
         if(pointer===0) return persons
         
@@ -88,3 +88,20 @@ function bubbleSortWhile(arr){
         }
         return bubbleSortPersons(persons,pointer-1)
       }
+
+      function bubbleSortPersonsfor(persons){
+        let len=persons.length
+        
+        for(var i=0;i<len;i++){
+          for (var j=0;j<len-1-i;j++){
+            if(persons[j].age>persons[j+1].age){
+              let temp = persons[j]
+              persons[j]=persons[j+1]
+              persons[j+1]=temp
+            }
+          }
+        }
+        return persons
+        
+      }
+      
