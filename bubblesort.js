@@ -43,7 +43,7 @@ function bubbleSortWhile(arr){
 
     if(pointer<1) return arr //BASE CASE
     
-    for(var i=0;i<len-1;i++){
+    for(var i=0;i<pointer;i++){
       if(arr[i]>arr[i+1]){
         let temp = arr[i]
         arr[i]=arr[i+1]
@@ -73,22 +73,23 @@ function bubbleSortWhile(arr){
     } 
     ];
   
-    function bubbleSortPersonsRec(persons, pointer=persons.length-1){
-        let len=persons.length
-        if(pointer===0) return persons
+    // function bubbleSortPersonsRec(persons, pointer=persons.length-1){
+    //     let len=persons.length
+    //     if(pointer===0) return persons
         
-        for(var i=0; i<len-1;i++){
-          console.log(persons[i].age)
-          if(persons[i].age>persons[i+1].age){
+    //     for(var i=0; i<1;i++){
+    //       console.log(persons[i].age)
+    //       if(persons[i].age>persons[i+1].age){
             
-            let temp= persons[i]
-            persons[i]=persons[i+1]
-            persons[i+1]=temp
-          }
-        }
-        return bubbleSortPersons(persons,pointer-1)
-      }
+    //         let temp= persons[i]
+    //         persons[i]=persons[i+1]
+    //         persons[i+1]=temp
+    //       }
+    //     }
+    //     return bubbleSortPersons(persons,pointer-1)
+    //   }
 
+    // FROM http://codingmiles.com/sorting-algorithms-bubble-sort-using-javascript/
       function bubbleSortPersonsfor(persons){
         let len=persons.length
         
