@@ -52,6 +52,11 @@ describe('Bubble Sort', function(){
   })
 
   describe('Bubble Sort Recursive',()=>{
+    
+    it('counts the number of times called',()=>{
+      spyOn(window,'bubbleSortRecursive').and.callThrough();
+      
+    })
     it('handles an empty array', ()=>{
       expect( bubbleSortRecursive([]) ).toEqual( [] );
     });
@@ -69,6 +74,5 @@ describe('Bubble Sort', function(){
     it('correctly sorts an array of letters',()=>{
       expect (bubbleSortRecursive(['x','z','n','c','k','j']) ).toEqual( [ 'c', 'j', 'k', 'n', 'x', 'z' ] )
     });
-
 
   })
